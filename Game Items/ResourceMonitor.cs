@@ -1,7 +1,7 @@
-﻿using Nautilus.Assets;
-using Nautilus.Crafting;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Nautilus.Assets;
+using Nautilus.Crafting;
 using UnityEngine;
 
 namespace ResourceMonitor
@@ -11,11 +11,13 @@ namespace ResourceMonitor
         public static readonly Vector3 LargeScale = new Vector3(2.3f, 2.3f, 1f);
         public PrefabInfo PrefabInfo { get; private set; }
         public Boolean IsLarge { get; private set; }
+
         public ResourceMonitor(PrefabInfo prefabInfo, bool isLarge = false)
         {
             this.PrefabInfo = prefabInfo;
             this.IsLarge = isLarge;
         }
+
         public RecipeData GetRecipe()
         {
             int numIngredients = 1;
@@ -24,12 +26,12 @@ namespace ResourceMonitor
             return new RecipeData()
             {
                 craftAmount = 1,
-                Ingredients = new List<CraftData.Ingredient>()
+                Ingredients = new List<Ingredient>()
                 {
-                    new CraftData.Ingredient(TechType.Glass, numIngredients),
-                    new CraftData.Ingredient(TechType.ComputerChip, numIngredients),
-                    new CraftData.Ingredient(TechType.AdvancedWiringKit, numIngredients)
-                }
+                    new Ingredient(TechType.Glass, numIngredients),
+                    new Ingredient(TechType.ComputerChip, numIngredients),
+                    new Ingredient(TechType.AdvancedWiringKit, numIngredients),
+                },
             };
         }
 

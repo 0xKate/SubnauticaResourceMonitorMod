@@ -35,7 +35,7 @@ namespace ResourceMonitor
             MODNAME = "ResourceMonitor",
             AUTHOR = "0x4b",
             GUID = "katemods.resourcemonitor.unofficial",
-            VERSION = "2.0.36";
+            VERSION = "2.0.38";
         #endregion
 
         public void Awake()
