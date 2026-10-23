@@ -24,11 +24,11 @@ namespace ResourceMonitor
             return new RecipeData()
             {
                 craftAmount = 1,
-                Ingredients = new List<CraftData.Ingredient>()
+                Ingredients = new List<Ingredient>()
                 {
-                    new CraftData.Ingredient(TechType.Glass, numIngredients),
-                    new CraftData.Ingredient(TechType.ComputerChip, numIngredients),
-                    new CraftData.Ingredient(TechType.AdvancedWiringKit, numIngredients)
+                    new Ingredient(TechType.Glass, numIngredients),
+                    new Ingredient(TechType.ComputerChip, numIngredients),
+                    new Ingredient(TechType.AdvancedWiringKit, numIngredients)
                 }
             };
         }
